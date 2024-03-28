@@ -85,7 +85,7 @@ function glow(winningArrays){
    }
 }
 
-button.addEventListener('click',reset());
+button.addEventListener('click',reset);
 function reset(){
     arr=[];
     zero=[];

@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Anta&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anta&family=Edu+NSW+ACT+Foundation:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 body{
     margin: 0;
     padding: 0;
-    font-family: "Mulish", sans-serif;
+    font-family: "Edu NSW ACT Foundation", cursive;
     background-size: cover;
 }
 .score{
@@ -13,10 +13,10 @@ body{
 }
 .heading{
     transform: scale(1.5);
-    background: linear-gradient(to right bottom, #5e438a, #9d4683) ;
+    background: linear-gradient(to right bottom, #8c68c7, #b76da1) ;
     color: transparent;
     -webkit-background-clip:text;
-    font-weight: 900;
+  
 }
 .main{
     margin: auto;
@@ -105,16 +105,4 @@ button:active{
 .glow{
     background-color: greenyellow;
     
-}
-@media (max-width:1081px) {
-.main{
-    margin: 10rem auto;
-    transform: scale(1.3);
-}
-button{
-    transform: scale(1.2);
-}
-.heading{
-    display: none;
-}
 }

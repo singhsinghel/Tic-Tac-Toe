@@ -23,9 +23,8 @@ let zeroWin=0;
 let oWin=0;
 let xWin=0;
 
-for(let box of boxes){
-    box.addEventListener('click',()=>{
-        let checked=box.getAttribute('id');
+function handler() {
+  let checked=this.getAttribute('id');
 
         if(arr.indexOf(checked)==-1){
             arr.push(checked);
@@ -46,19 +45,21 @@ for(let box of boxes){
               h1.innerText="X's turn";
             }
            image.classList.add('img');
-           box.append(image);
+           this.append(image);
 
            for(let i=0;i<winningArrays.length;i++){
             if(winningArrays[i].every(letter=>zero.includes(letter))){
               glow(winningArrays[i]);
               h1.innerText="🎉Player zero wins🎉";
               oWin++;
+              remover();
               setTimeout(reset,1000);
            }
            else if(winningArrays[i].every(letter=>cross.includes(letter))){
              h1.innerText="🎉Player cross wins🎉";
              glow(winningArrays[i]);
              xWin++;
+             remover();
              setTimeout(reset,1000);
            }
           else if(count==9&&crossWin==0&&zeroWin==0){
@@ -67,8 +68,19 @@ for(let box of boxes){
           }
         }
         }
-    })
 }
+
+function remover() {
+  for(let box of boxes){
+    box.removeEventListener('click',handler)
+  }
+}
+function adder(){
+  for(let box of boxes){
+    box.addEventListener('click',handler)
+  }
+}
+adder();                 // to call the functioin initially
 
 function glow(winningArrays){
     for(let i=0;i<winningArrays.length;i++){
@@ -93,4 +105,5 @@ function reset(){
     image.remove();
   oScore.innerText=`O's score: ${oWin}`;
   xScore.innerText=`X's score: ${xWin}`; 
+  adder();
 }

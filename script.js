@@ -16,7 +16,7 @@ let ver2=['b','e','h'];
 let ver3=['c','f','i'];
 let digo1=['a','e','i'];
 let digo2=['c','e','g'];
-let winningArrays = [hor1, hor2, hor3, ver1, ver2, ver3, digo1, digo2];
+let winningArrays = [hor1, hor2, hor3, ver1, ver2, ver3, digo1, digo2];    // to ierate through every array(mapping is done)
 let count=0;
 let crossWin=0;
 let zeroWin=0;
@@ -36,19 +36,20 @@ function handler() {
               flag=1;
               count++;
               h1.innerText="O's turn";
+              image.classList.add('img');
             }
             else if(flag==1){
-              image.setAttribute('src',"./images/zero.png");
+              image.setAttribute('src',"./images/zero3.png");
               zero.push(checked);
               flag=0;
               count++;
               h1.innerText="X's turn";
+              image.classList.add('img2');
             }
-           image.classList.add('img');
            this.append(image);
 
            for(let i=0;i<winningArrays.length;i++){
-            if(winningArrays[i].every(letter=>zero.includes(letter))){
+            if(winningArrays[i].every(letter=>zero.includes(letter))){     // itereating through all the elemnts of array and checking all the elements of the specific father element
               glow(winningArrays[i]);
               h1.innerText="🎉Player zero wins🎉";
               oWin++;

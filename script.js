@@ -70,6 +70,7 @@ for(let box of boxes){
            }
           else if(count==9&&crossWin==0&&zeroWin==0){
             h1.innerText="Game tied";
+              setTimeout(reset,1500);
           }
         }
         }
@@ -85,7 +86,7 @@ function glow(winningArrays){
    }
 }
 
-button.addEventListener('click',reset);
+button.addEventListener('click',reset());
 function reset(){
     arr=[];
     zero=[];

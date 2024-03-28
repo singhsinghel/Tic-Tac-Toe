@@ -24,7 +24,6 @@ let zeroWin=0;
 let oWin=0;
 let xWin=0;
 
-
 for(let box of boxes){
     box.addEventListener('click',()=>{
         let checked=box.getAttribute('id');
@@ -57,6 +56,7 @@ for(let box of boxes){
               glow(winningArrays[i]);
               h1.innerText="🎉Player zero wins🎉";
               oWin++;
+              box.removeEventListener('click')
               setTimeout(reset,1000);
            }
 
@@ -66,7 +66,7 @@ for(let box of boxes){
              winningIndexes[i]=i;
              glow(winningArrays[i]);
              xWin++;
-             setTimeout(reset,2000);
+             setTimeout(reset,1000);
            }
           else if(count==9&&crossWin==0&&zeroWin==0){
             h1.innerText="Game tied";
@@ -84,13 +84,12 @@ function glow(winningArrays){
       },300)
    }
 }
-
-button.addEventListener('click',reset());
+button.addEventListener('click',reset);
 function reset(){
-    arr=[];
-    zero=[];
-    cross=[];
-    count=[];
+  arr=[];
+  zero=[];
+  cross=[];
+  count=[];
     winningIndexes = [-1, -1, -1, -1, -1, -1, -1, -1];
     crossWin=0;
     zeroWin=0;
@@ -98,7 +97,7 @@ function reset(){
     h1.innerText="Cross' turn";
     let images=document.querySelectorAll('img')
     for(let image of images)
-     image.remove();
-    oScore.innerText=`O's score: ${oWin}`;
-    xScore.innerText=`X's score: ${xWin}`; 
+    image.remove();
+  oScore.innerText=`O's score: ${oWin}`;
+  xScore.innerText=`X's score: ${xWin}`; 
 }

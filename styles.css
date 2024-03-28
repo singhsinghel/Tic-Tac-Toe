@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Anta&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Mulish", sans-serif;
+    background-size: cover;
+}
+.score{
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: space-around;
+}
+.heading{
+    transform: scale(1.5);
+    background: linear-gradient(to right bottom, #5e438a, #9d4683) ;
+    color: transparent;
+    -webkit-background-clip:text;
+    font-weight: 900;
+}
+.main{
+    margin: auto;
+    margin-top: 3rem;
+    height: 27rem;
+    width: 27rem;
+    background-color: bisque;
+    border-radius: 1rem;
+}
+.child{
+    height: 9rem;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 9rem 9rem 9rem;
+}
+.box{
+    height: 100%;
+    width: 9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.a{
+    border-right: 0.3rem solid black;
+    border-bottom: 0.3rem solid black;
+    border-radius: 0px 4px 0px 4px;
+}
+.b{
+    border-right: 0.3rem solid black;
+    border-bottom: 0.3rem solid black; 
+    border-radius: 0px 4px ;  
+}
+.c{
+    border-bottom: 0.3rem solid black;
+    border-radius: 0px 0px 4px;
+}
+.d{
+    border-right: 0.3rem solid black;
+    border-bottom: 0.3rem solid black;
+    border-radius: 0px 0px 0px 4px;
+}
+.e{
+    border-right: 0.3rem solid black;
+    border-bottom: 0.3rem solid black;
+}
+.f{
+    border-bottom: 0.3rem solid black;
+    border-radius: 0px 0px 4px;
+}
+.g{
+    border-right: 0.3rem solid black;
+    border-radius: 0px 0px 4px;
+}
+
+.h{
+    border-right: 0.3rem solid black;
+    border-radius: 0px 0px 4px;
+}
+
+.img{
+    height: 8rem;
+    width: 8rem;
+    max-width: 100%;
+    max-height: 100%;
+}
+.reset{
+    text-align: center;
+}
+button{
+    height: 2.7rem;
+    width: 10rem;
+    font-size: large;
+    font-weight: 700;
+    background-color: white;
+    border-radius: 0.5rem;
+    border: 3px solid rgb(234, 197, 153);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.551);
+}
+button:hover{
+    background-color: bisque;
+}
+button:active{
+    box-shadow: none;
+}
+.glow{
+    background-color: greenyellow;
+    
+}
+@media (max-width:1081px) {
+.main{
+    margin: 10rem auto;
+    transform: scale(1.4);
+}
+button{
+    transform: scale(1.2);
+}
+}

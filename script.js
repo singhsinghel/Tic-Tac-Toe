@@ -17,7 +17,6 @@ let ver3=['c','f','i'];
 let digo1=['a','e','i'];
 let digo2=['c','e','g'];
 let winningArrays = [hor1, hor2, hor3, ver1, ver2, ver3, digo1, digo2];
-let winningIndexes = [-1, -1, -1, -1, -1, -1, -1, -1];
 let count=0;
 let crossWin=0;
 let zeroWin=0;
@@ -51,19 +50,13 @@ for(let box of boxes){
 
            for(let i=0;i<winningArrays.length;i++){
             if(winningArrays[i].every(letter=>zero.includes(letter))){
-              winningIndexes[i]=i;
-              console.log(winningArrays[i]);
               glow(winningArrays[i]);
               h1.innerText="🎉Player zero wins🎉";
               oWin++;
-              box.removeEventListener('click')
               setTimeout(reset,1000);
            }
-
            else if(winningArrays[i].every(letter=>cross.includes(letter))){
              h1.innerText="🎉Player cross wins🎉";
-             console.log(winningArrays[i]);
-             winningIndexes[i]=i;
              glow(winningArrays[i]);
              xWin++;
              setTimeout(reset,1000);
@@ -91,7 +84,6 @@ function reset(){
   zero=[];
   cross=[];
   count=[];
-    winningIndexes = [-1, -1, -1, -1, -1, -1, -1, -1];
     crossWin=0;
     zeroWin=0;
     flag=0;

@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Anta&family=Edu+NSW+ACT+Foundation:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
 body{
     margin: 0;
     padding: 0;
@@ -16,7 +15,6 @@ body{
     background: linear-gradient(to right bottom, #8c68c7, #b76da1) ;
     color: transparent;
     -webkit-background-clip:text;
-  
 }
 .main{
     margin: auto;
@@ -29,7 +27,6 @@ body{
 .child{
     height: 9rem;
     width: 100%;
-
     display: grid;
     grid-template-columns: repeat(3,9rem);    /* selecting grid columns*/
 }
@@ -71,12 +68,10 @@ body{
     border-right: 0.3rem solid black;
     border-radius: 0px 0px 4px;
 }
-
 .h{
     border-right: 0.3rem solid black;
     border-radius: 0px 0px 4px;
 }
-
 .img{
     height: 8rem;
     width: 8rem;
@@ -100,13 +95,49 @@ button{
     border: 3px solid rgb(234, 197, 153);
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.551);
 }
-button:hover{
-    background-color: bisque;
-}
 button:active{
     box-shadow: none;
+    background-color: bisque;
 }
 .glow{
     background-color: greenyellow;
-    
 }
+@media (max-width:850px) {
+    .main{
+       transform: scale(0.9);
+       margin: 0px;
+       position: relative;
+       right: 1.3rem;
+    }
+    .heading{
+        margin-top: 6rem;
+    }
+}
+
+@media only screen and (orientation: landscape) {
+  body{
+    display: flex;
+    justify-content: space-around;
+
+  }
+   .score{
+    width: 12rem;
+    display: grid;
+    grid-template-rows:repeat(3,8rem);
+
+   }
+   .score h2{
+    display: inline-block;
+    margin: auto;
+   }
+   .main{
+    transform: scale(0.8);
+    margin-top: -1rem;
+   }
+   .reset{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   }
+  }

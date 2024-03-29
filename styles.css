@@ -102,7 +102,7 @@ button:active{
 .glow{
     background-color: greenyellow;
 }
-@media (max-width:768px) {
+@media (max-width:500px) {
     .main{
        transform: scale(0.9);
        margin: 0px;
@@ -113,7 +113,6 @@ button:active{
         margin-top: 6rem;
     }
 }
-
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   body{
     display: flex;
@@ -124,7 +123,6 @@ button:active{
     width: 12rem;
     display: grid;
     grid-template-rows:repeat(3,8rem);
-
    }
    .score h2{
     display: inline-block;

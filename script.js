@@ -51,13 +51,13 @@ function handler() {
            for(let i=0;i<winningArrays.length;i++){
             if(winningArrays[i].every(letter=>zero.includes(letter))){     // itereating through all the elemnts of array and checking all the elements of the specific father element
               glow(winningArrays[i]);
-              h1.innerText="🎉Player zero wins🎉";
+              h1.innerText="🎉 Zero wins 🎉";
               oWin++;
               remover();
               setTimeout(reset,1000);
            }
            else if(winningArrays[i].every(letter=>cross.includes(letter))){
-             h1.innerText="🎉Player cross wins🎉";
+             h1.innerText="🎉 Cross wins 🎉";
              glow(winningArrays[i]);
              xWin++;
              remover();
